@@ -31,7 +31,6 @@ PyDictionary==1.5.2
 pylint==2.3.1
 pypiwin32==223
 pytz==2019.1
-pywin32==227
 requests==2.22.0
 selenium==3.141.0
 six==1.12.0
