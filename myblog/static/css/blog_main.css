@@ -2,6 +2,7 @@ body {
     margin-top: 100px;
     background: #1f2022; 
     color: #ffffff;
+    font-family: 'Open Sans', sans-serif;;
 }
 
 ul {
@@ -21,4 +22,22 @@ ul li a {
     color: #0080ff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.4em;
+}
+
+.small-font {
+    font-size: 0.9em;
+}
+
+#back-btn {
+    text-decoration: none;
+    color: #0080ff;
+}
+
+#article-section {
+    display: block;
+    background: #EAEAEA;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
 }

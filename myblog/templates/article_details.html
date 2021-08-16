@@ -4,13 +4,18 @@
 
 {% block content %}
 
-<h1> {{ post.title }} </h1>
-<small>BY: {{ post.author.first_name }} {{ post.author.last_name }}</small>
+{{ post.title_tag }} <br/>
+
+<h1>{{ post.title }} </h1>
+<small style="font-weight: bold;">BY: {{ post.author.first_name }} {{ post.author.last_name }}</small> <br/> 
+<span style="font-size: small;">Last updated: {{ post.last_modified }}</span>
 <hr>
-<br/>
-{{ post.body }}
+<span id="article-section">
+    {{ post.body }}
+</span>
+
 
 <br/><br/>
-<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+<a href="{% url 'home' %}" id="back-btn">Back</a>
 
 {% endblock %}

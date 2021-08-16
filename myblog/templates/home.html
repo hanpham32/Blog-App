@@ -12,6 +12,7 @@
 {% for post in object_list %}
     <li> 
         <a href="{% url 'article-detail' post.pk%}"> {{ post.title }} </a><br/>
+        <span class="small-font">Date: {{ post.date_created }}</span><br/>
         Description: {{ post.preview }}
     </li>
 {% endfor %}
