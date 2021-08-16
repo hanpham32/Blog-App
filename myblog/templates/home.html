@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+    Han's Blogs
+{% endblock %}
+
+{% block content %}
+
+<h1>Recent Posts</h1>
+<hr>
+<ul>
+{% for post in object_list %}
+    <li> 
+        <a href="{% url 'article-detail' post.pk%}"> {{ post.title }} </a><br/>
+        Description: {{ post.preview }}
+    </li>
+{% endfor %}
+
+</ul>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+body {
+    margin-top: 100px;
+    background: #1f2022; 
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    background: #333333;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+ul li a {
+    color: #0080ff;
+    text-decoration: none;
+    font-weight: bold;
+}
