@@ -34,6 +34,12 @@ ul li a {
     color: #0080ff;
 }
 
+#post-btn {
+    padding: 15px 32px;
+    background-color: cornflowerblue;
+}
+
+
 #article-section {
     display: block;
     background: #EAEAEA;
