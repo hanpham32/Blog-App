@@ -9,8 +9,10 @@
 <h1>{{ post.title }} </h1>
 <small style="font-weight: bold;">BY: {{ post.author.first_name }} {{ post.author.last_name }}</small> <br/> 
 <span style="font-size: small;">Last updated: {{ post.last_modified }}</span> <br/>
+{% if user.is_authenticated %}
 <small><a href="{% url 'update-post' post.pk %}">(Edit)</a></small>
 <small><a href="{% url 'delete-post' post.pk %}">(Delete)</a></small>
+{% endif %}
 <hr>
 <span id="article-section">
     {{ post.body }}

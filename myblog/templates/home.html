@@ -1,22 +1,25 @@
 {% extends 'base.html' %}
 
 {% block title%}
-    Han's Blogs
+Han's Blogs
 {% endblock %}
 
 {% block content %}
 
 <h1>Recent Posts</h1>
+
 <hr>
-<ul>
-{% for post in object_list %}
-    <li> 
-        <a href="{% url 'article-detail' post.pk%}"> {{ post.title }} </a><br/>
-        <span class="small-font">Date: {{ post.date_created }}</span><br/>
-        Description: {{ post.preview }}
-    </li>
-{% endfor %}
 
-</ul>
+<div class="posts">
+    <ul>
+        {% for post in object_list %}
+        <li>
+            <a href="{% url 'article-detail' post.pk%}"> {{ post.title }} </a><br />
+            <span class="small-font">Date: {{ post.date_created }}</span><br />
+            Description: {{ post.preview }}
+        </li>
+        {% endfor %}
 
+    </ul>
+</div>
 {% endblock %}

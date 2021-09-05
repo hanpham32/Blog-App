@@ -6,6 +6,8 @@
 
 {% block content %}
 
+
+{% if user.is_authenticated %}
 <h1>Updating Post..</h1>
 <div class="form-group">
     <form method="POST">
@@ -15,5 +17,9 @@
     </form>
     
 </div>
+{% else %}
+You're not allowed here (and you know it)..
+{% endif %}
+
 
 {% endblock %}

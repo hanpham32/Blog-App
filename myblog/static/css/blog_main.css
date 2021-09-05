@@ -5,20 +5,47 @@ body {
     font-family: 'Open Sans', sans-serif;;
 }
 
-ul {
+.login-link {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul li {
+    padding-right: 1em;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+nav ul li a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.posts ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-ul li {
+.posts ul li {
     background: #333333;
     padding: 5px;
     border-radius: 5px;
     font-size: medium;
 }
 
-ul li a {
+.posts ul li a {
     color: #0080ff;
     text-decoration: none;
     font-weight: bold;
@@ -42,8 +69,8 @@ ul li a {
 
 #article-section {
     display: block;
-    background: #EAEAEA;
+    background: #353535;
     padding: 5px;
     border-radius: 5px;
-    color: black;
+    color: #ffffff;
 }
