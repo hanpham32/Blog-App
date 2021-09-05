@@ -8,10 +8,11 @@
 
 
 {% if user.is_authenticated %}
-<h1>Updating Post..</h1>
+<h1>Editing Post..</h1>
 <div class="form-group">
     <form method="POST">
         {% csrf_token %}
+        {{ form.media }}
         {{ form.as_p }}
         <button class="btn btn-secondary">Update</button>
     </form>
