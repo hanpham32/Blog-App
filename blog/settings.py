@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-5vu8)8+wqza3w0+n0bsna52c&759%p1#b88l*=+6xv6-j(o=x*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hanwebblog.herokuapp.com', '127.0.0.1', ',localhost']
+ALLOWED_HOSTS = ['hanwebblog.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'da18udvjl5itec',
+        'USER' : 'yadpavbpltnymx',
+        'PASSWORD' : 'd9689902b9c64d85fde0210df881fbf1284946c1f8d0d2c9f3cc501c42b578ca',
+        'HOST' : 'ec2-18-235-4-83.compute-1.amazonaws.com',
+        'PORT' : '5432',
     }
 }
 

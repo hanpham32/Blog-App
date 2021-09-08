@@ -43,6 +43,7 @@ nav ul li a:hover {
     padding: 5px;
     border-radius: 5px;
     font-size: medium;
+    padding-bottom: 1em;
 }
 
 .posts ul li a {
