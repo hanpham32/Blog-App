@@ -2,36 +2,50 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/blog_main.css' %}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-  <link rel="stylesheet" type="text/css" href="{% static 'css/blog_main.css' %}" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <title>{% block title %} {% endblock %}</title>
+  </head>
 
-  <title>{% block title %} {% endblock %}</title>
-</head>
+  <body>
+    <div>
+      <nav>
+        <ul>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'add_post' %}">Add Post</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
 
-<body>
-  <div class="container">
-    <nav>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'add_post' %}">Add Post</a></li>
-        <li><a href="{% url 'logout' %}">Logout</a></li>
-        {% else %}
-        <li><a href="{% url 'login' %}">Login</a></li>
-        <!-- <li><a href="{% url 'register' %}">Register</a></li> -->
-        {% endif %}
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <!-- <li><a href="{% url 'register' %}">Register</a></li> -->
+          {% endif %}
+        </ul>
+      </nav>
+      <ul class="user-navigation">
+        <li><a href="{% url 'home' %}">Home</a></li>
       </ul>
-    </nav>
-    {% block content %} {% endblock %}
-  </div>
-</body>
-
+      <br/>
+      {% block content %} {% endblock %}
+    </div>
+  </body>
 </html>

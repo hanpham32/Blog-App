@@ -3,6 +3,8 @@ body {
     background: #1f2022; 
     color: #ffffff;
     font-family: 'Open Sans', sans-serif;;
+    padding-left: 20em;
+    padding-right: 20em;
 }
 
 .login-link {
@@ -10,9 +12,16 @@ body {
     text-decoration: none;
 }
 
-nav {
-
+.user-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
 }
+.user-navigation li a{
+    color: #8B8C8D;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -23,11 +32,11 @@ nav ul {
 nav ul li {
     padding-right: 1em;
 }
-nav ul li a {
+li a {
     text-decoration: none;
     color: #ffffff;
 }
-nav ul li a:hover {
+li a:hover {
     text-decoration: none;
     color: #ffffff;
 }
@@ -44,6 +53,7 @@ nav ul li a:hover {
     border-radius: 5px;
     font-size: medium;
     padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .posts ul li a {
@@ -58,8 +68,19 @@ nav ul li a:hover {
 }
 
 #back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 5px;
+    background-color: #0080ff;
+    width: 80px;
+    height: 30px;
+}
+#back-btn a {
     text-decoration: none;
-    color: #0080ff;
+    color: white;
 }
 
 #post-btn {

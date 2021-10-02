@@ -7,8 +7,9 @@
 {{ post.title_tag }} <br/>
 
 <h1>{{ post.title }} </h1>
-<small style="font-weight: bold;">BY: {{ post.author.first_name }} {{ post.author.last_name }}</small> <br/> 
+<small style="font-weight: bold;">By: {{ post.author.first_name }} {{ post.author.last_name }}</small> <br/> 
 <span style="font-size: small;">Last updated: {{ post.last_modified }}</span> <br/>
+<span >Tags: {{ post.title_tag }}</span>
 {% if user.is_authenticated %}
 <small><a href="{% url 'update-post' post.pk %}">(Edit)</a></small>
 <small><a href="{% url 'delete-post' post.pk %}">(Delete)</a></small>
@@ -19,7 +20,9 @@
 </span>
 
 
-<br/><br/>
-<a href="{% url 'home' %}" id="back-btn">Back</a>
+<br/>
+<div id="back-btn"><a href="{% url 'home' %}">Back</a></div>
+
+<br/>
 
 {% endblock %}
