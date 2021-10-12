@@ -1,8 +1,5 @@
 {% extends 'base.html' %} {% block title%} Han's Blogs {% endblock %}
 {% block content %}
-<ul class="user-navigation">
-  <li><a href="https://hanspham.com/">Home</a></li>
-</ul>
 <br />
 <h1>Recent Posts</h1>
 
@@ -12,10 +9,11 @@
   <ul>
     {% for post in object_list %}
     <li>
-      <a href="{% url 'article-detail' post.pk%}"> {{ post.title }} </a><br />
-      <span class="small-font">Date: {{ post.date_created }}</span><br />
-      Description: {{ post.preview }}
+      <span class="date">{{ post.datepublished }}</span><br />
+      <a href="{% url 'article-detail' post.pk%}" class="post-title"> {{ post.title }} </a><br />
+      {{ post.preview }}
     </li>
+    <hr>
     {% endfor %}
   </ul>
 </div>

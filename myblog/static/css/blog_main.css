@@ -1,25 +1,18 @@
 body {
     margin-top: 100px;
-    background: #1f2022; 
-    color: #ffffff;
+    color: #1f2022; 
+    background: #ffffff;
     font-family: 'Open Sans', sans-serif;;
-    padding-left: 20em;
-    padding-right: 20em;
+    display: flex;
+    justify-content: center;
 }
 
-.login-link {
-    color: white;
-    text-decoration: none;
+.container {
+    width: 1000px;
 }
 
-.user-navigation {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
-}
-.user-navigation li a{
-    color: #8B8C8D;
+nav {
+    margin-bottom: 2em;
 }
 
 nav ul {
@@ -27,18 +20,20 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
+
 nav ul li {
     padding-right: 1em;
 }
+
 li a {
     text-decoration: none;
-    color: #ffffff;
+    color: black;
 }
 li a:hover {
-    text-decoration: none;
-    color: #ffffff;
+    text-decoration: underline;
+    color: black;
 }
 
 .posts ul {
@@ -48,23 +43,32 @@ li a:hover {
 }
 
 .posts ul li {
-    background: #333333;
     padding: 5px;
     border-radius: 5px;
     font-size: medium;
+    padding-top: 1em;
     padding-bottom: 1em;
     margin-bottom: 1em;
 }
 
 .posts ul li a {
-    color: #0080ff;
+    color: black;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 2.5em;
+}
+.posts ul li a:hover {
+    color: #5C7AEA;
 }
 
-.small-font {
+.post-title{
+    font-family: 'Oswald', sans-serif;
+}
+
+.date {
     font-size: 0.9em;
+    font-style: italic;
+    color: grey;
 }
 
 #back-btn {
@@ -74,7 +78,7 @@ li a:hover {
     border-style: solid;
     border-width: 0px;
     border-radius: 5px;
-    background-color: #0080ff;
+    background-color: #5C7AEA;
     width: 80px;
     height: 30px;
 }
@@ -88,11 +92,14 @@ li a:hover {
     background-color: cornflowerblue;
 }
 
-
 #article-section {
     display: block;
-    background: #353535;
     padding: 5px;
     border-radius: 5px;
-    color: #ffffff;
+}
+
+@media only screen and (max-width: 480px) {
+    .posts ul li a {
+        font-size: 2em;
+    }
 }

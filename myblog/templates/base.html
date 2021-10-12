@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-        crossorigin="anonymous"
-      />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -23,15 +23,21 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
     <title>{% block title %} {% endblock %}</title>
   </head>
 
   <body>
-    <div>
+    <div class="container">
       <nav>
         <ul>
+          <li><a href="https://hanspham.com/" class="home-link">Home</a></li>
           {% if user.is_authenticated %}
+          
           <li><a href="{% url 'add_post' %}">Add Post</a></li>
           <li><a href="{% url 'logout' %}">Logout</a></li>
           {% else %}

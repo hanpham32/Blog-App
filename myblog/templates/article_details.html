@@ -3,7 +3,7 @@
 {% block title %} {{ post.title}} {% endblock %}
 
 {% block content %}
-<div id="back-btn"><a href="{% url 'home' %}">Back</a></div>
+<button id="back-btn" style="margin-top:1em;"><a href="{% url 'home' %}">Back</a></button>
 <br/>
 {{ post.title_tag }} <br/>
 
@@ -21,7 +21,7 @@
 
 
 <br/>
-<div id="back-btn"><a href="{% url 'home' %}">Back</a></div>
+<button id="back-btn"><a href="{% url 'home' %}">Back</a></button>
 
 <br/>
 

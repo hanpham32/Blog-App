@@ -18,6 +18,9 @@ class Post(models.Model):
     date_created = models.DateTimeField(auto_now_add=True, blank=True)
     last_modified = models.DateTimeField(auto_now=True, blank=True)
     
+    def datepublished(self):
+        return self.date_created.strftime('%b %d %y')
+
     def __str__(self):
         return self.title
 
