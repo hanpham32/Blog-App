@@ -1,7 +1,9 @@
 {% extends 'base.html' %} {% block title%} Han's Blogs {% endblock %}
 {% block content %}
 <br />
-<h1>Recent Posts</h1>
+<h1>Welcome.</h1>
+<p>This is my little corner on the internet where I share things that I find intriguing ✍️</p>
+<h3>Recent Posts</h1>
 
 <hr />
 
@@ -10,6 +12,7 @@
     {% for post in object_list %}
     <li>
       <span class="date">{{ post.datepublished }}</span><br />
+      <span class="title-tag">{{post.title_tag}}</span> <br />
       <a href="{% url 'article-detail' post.pk%}" class="post-title"> {{ post.title }} </a><br />
       {{ post.preview }}
     </li>
